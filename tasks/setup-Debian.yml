@@ -6,7 +6,7 @@
   apt: name={{ item }} state=present default_release={{ pureftpd_default_release }}
   with_items:
     - pure-ftpd
-    - python3-pip
+    - python3-pexpect
     - openssl
 
 - name: Install pexpect
