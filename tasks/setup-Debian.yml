@@ -8,8 +8,3 @@
     - pure-ftpd
     - python3-pexpect
     - openssl
-
-- name: Install pexpect
-  pip:
-    name: "pexpect"
-    state: present
