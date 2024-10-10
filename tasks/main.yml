@@ -18,11 +18,11 @@
   file: dest={{ pure_ftpd_root }} mode=0755 state=directory owner={{ pure_ftpd_user }} group={{ pure_ftpd_group }}
 
 # Create and/or install SSL certificate
-- include: tls.yml
+- include_tasks: tls.yml
   when: pure_ftpd_tls
 
 # Create the virtual FTP users and set their passwords
-- include: virtual-user.yml
+- include_tasks: virtual-user.yml
   with_items: "{{ pure_ftpd_vusers }}"
 
 - name: Link virtual FTP user database to the correct location
